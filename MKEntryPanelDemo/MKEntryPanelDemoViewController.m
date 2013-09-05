@@ -35,12 +35,9 @@
 
 -(IBAction) addTapped:(id) sender
 {
-    [MKEntryPanel showPanelWithTitle:NSLocalizedString(@"Enter a text name", @"") 
-                              inView:self.view 
-                       onTextEntered:^(NSString* enteredString)
-     {
-         NSLog(@"Entered: %@", enteredString);
-     }];
+    [MKEntryPanel showPanelWithTitle:NSLocalizedString(@"Enter a text name", @"") content:@"content" inView:self.view onTextEntered:^(NSString *inputString) {
+      NSLog(@"Entered: %@", inputString);
+    }];
 }
 
 - (void)viewDidUnload

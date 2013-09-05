@@ -87,11 +87,15 @@
     return panel;
 }
 
-+(void) showPanelWithTitle:(NSString*) title inView:(UIView*) view onTextEntered:(CloseBlock) editingEndedBlock
++(void) showPanelWithTitle:(NSString *)title
+                   content:(NSString *)content
+                    inView:(UIView *)view
+             onTextEntered:(CloseBlock)editingEndedBlock
 {
     MKEntryPanel *panel = [MKEntryPanel panel];
     panel.closeBlock = editingEndedBlock;
     panel.titleLabel.text = title;
+    panel.entryField.text = content;
     [panel.entryField becomeFirstResponder];
     
     panel.dimView = [[[DimView alloc] initWithParent:panel onTappedSelector:@selector(cancelTapped:)] autorelease];

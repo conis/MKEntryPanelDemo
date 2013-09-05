@@ -21,6 +21,7 @@
 		AB82E7361374F2D500056B00 /* TopBar.png in Resources */ = {isa = PBXBuildFile; fileRef = AB82E7321374F2D500056B00 /* TopBar.png */; };
 		AB82E7371374F2D500056B00 /* TopBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB82E7331374F2D500056B00 /* TopBar@2x.png */; };
 		AB82E7411374F43D00056B00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB82E7401374F43D00056B00 /* QuartzCore.framework */; };
+		D2AEB83C17D875BE0088577B /* MKEntryPanelDemo.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D2AEB83B17D875BE0088577B /* MKEntryPanelDemo.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		AB82E7321374F2D500056B00 /* TopBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopBar.png; sourceTree = "<group>"; };
 		AB82E7331374F2D500056B00 /* TopBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TopBar@2x.png"; sourceTree = "<group>"; };
 		AB82E7401374F43D00056B00 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D2AEB83B17D875BE0088577B /* MKEntryPanelDemo.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MKEntryPanelDemo.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		AB82E7141374F29500056B00 /* MKEntryPanelDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D2AEB83B17D875BE0088577B /* MKEntryPanelDemo.podspec */,
 				AB82E71D1374F29500056B00 /* MKEntryPanelDemoAppDelegate.h */,
 				AB82E71E1374F29500056B00 /* MKEntryPanelDemoAppDelegate.m */,
 				AB82E7201374F29500056B00 /* MainWindow.xib */,
@@ -183,6 +186,7 @@
 				AB82E7351374F2D500056B00 /* MKEntryPanel.xib in Resources */,
 				AB82E7361374F2D500056B00 /* TopBar.png in Resources */,
 				AB82E7371374F2D500056B00 /* TopBar@2x.png in Resources */,
+				D2AEB83C17D875BE0088577B /* MKEntryPanelDemo.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +313,7 @@
 				AB82E72D1374F29600056B00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

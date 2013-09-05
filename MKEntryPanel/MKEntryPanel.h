@@ -38,6 +38,6 @@ typedef void (^CloseBlock)(NSString *inputString);
 @property (nonatomic, assign) IBOutlet UITextField *entryField;
 @property (nonatomic, assign) IBOutlet UIImageView *backgroundGradient;
 
-+(void) showPanelWithTitle:(NSString*) title inView:(UIView*) view onTextEntered:(CloseBlock) editingEndedBlock;
++(void) showPanelWithTitle:(NSString*) title content: (NSString *)content inView:(UIView*) view onTextEntered:(CloseBlock) editingEndedBlock;
 - (IBAction) textFieldDidEndOnExit:(UITextField *)textField;
 @end
