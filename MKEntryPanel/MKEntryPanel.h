@@ -21,7 +21,7 @@ typedef void (^CloseBlock)(NSString *inputString);
 - (id)initWithParent:(UIView*) aParentView onTappedSelector:(SEL) tappedSel;
 @end
 
-@interface MKEntryPanel : UIView {
+@interface MKEntryPanel : UIView<UITextFieldDelegate> {
     
     CloseBlock _closeBlock;
     UILabel *_titleLabel;

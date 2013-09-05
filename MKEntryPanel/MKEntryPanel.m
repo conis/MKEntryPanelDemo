@@ -69,15 +69,39 @@
     return self;
 }
 
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+  //[self.entryField resignFirstResponder];
+  [self textFieldDidEndOnExit:textField];
+  return YES;
+}
+
 +(MKEntryPanel*) panel
 {
-    MKEntryPanel *panel =  (MKEntryPanel*) [[[UINib nibWithNibName:@"MKEntryPanel" bundle:nil] 
-                                           instantiateWithOwner:self options:nil] objectAtIndex:0];
+  CGFloat spacing = 5;
+  CGRect rect = [[UIApplication sharedApplication].keyWindow screen].bounds;
+  rect.size.height = 100;
+  rect.size.width = rect.size.width;
+  
+  MKEntryPanel *panel =  [[MKEntryPanel alloc] init];
+  panel.frame = rect;
+  panel.backgroundColor = [UIColor grayColor];
+  //添加Title
+  panel.titleLabel = [[UILabel alloc] init];
+  panel.titleLabel.frame = CGRectMake(spacing, 0, panel.frame.size.width, 40);
+  panel.titleLabel.backgroundColor = [UIColor clearColor];
+  [panel addSubview: panel.titleLabel];
+  
+  //添加textField
+  panel.entryField = [[UITextField alloc] init];
+  panel.entryField.frame = CGRectMake(spacing, panel.titleLabel.frame.size.height + spacing, panel.frame.size.width - spacing * 2, 25);
+  panel.entryField.returnKeyType = UIReturnKeyDone;
+  panel.entryField.delegate = panel;
+  panel.entryField.borderStyle = UITextBorderStyleRoundedRect;
+  [panel addSubview: panel.entryField];
+  
+  //panel.backgroundGradient.image = [[UIImage imageNamed:@"TopBar"] stretchableImageWithLeftCapWidth:1 topCapHeight:5];
 
-    
-    panel.backgroundGradient.image = [[UIImage imageNamed:@"TopBar"] stretchableImageWithLeftCapWidth:1 topCapHeight:5];
-
-    CATransition *transition = [CATransition animation];
+  CATransition *transition = [CATransition animation];
 	transition.duration = kAnimationDuration;
 	transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 	transition.type = kCATransitionPush;	
